@@ -1,0 +1,10 @@
+<article *ngIf="pokemonParcial" [routerLink]="['',pokemonParcial.name]">
+  <img [src]="pokemonParcial.sprites.front_default"/>
+  <h2>{{pokemonParcial.name}}</h2>
+  <h2> N° :{{pokemonParcial.order}} en la Pokedex</h2>
+  <ul>
+    <li *ngFor="let stat of pokemonParcial.stats">
+      {{stat.stat.name}} : {{stat.base_stat}}
+    </li>
+  </ul>
+</article>
